@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-"use module"
 import assert from "assert"
 import { fork } from "child_process"
 
@@ -26,9 +25,10 @@ export async function test(){
 		"main ran",
 		"target-then console",
 		"target-then then",
-		"++imported target-then++",
+		"target-then setTimeout",
+		"++main saw target-then++",
 		"target-normal console",
-		"++imported target-normal++",
+		"++main saw target-normal++",
 	]
 	for( const line of lines){
 		if( line=== ""){
