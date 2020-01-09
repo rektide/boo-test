@@ -2,13 +2,15 @@
 
 > test of esm module's 'then' export
 
+# the 'then' export
+
 did you know that esm have a special `then` export that gets run on load? it's true.
 
 in [`target-then.js`](./target-then.js) we see:
 
 ```
 export async function then(){
-	console.log("target-then then")
+	/* [async code here] */
 }
 console.log("target-then console")
 ```
