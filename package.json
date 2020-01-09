@@ -2,7 +2,7 @@
 	"name": "module-then",
 	"version": "1.0.0",
 	"description": "test of esm module's 'then' export",
-	"main": "module-then.js",
+	"main": "./test.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
