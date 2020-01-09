@@ -1,0 +1,19 @@
+{
+	"name": "module-then",
+	"version": "1.0.0",
+	"description": "test of esm module's 'then' export",
+	"main": "module-then.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://archive.voodoowarez.com/module-then"
+	},
+	"keywords": [],
+	"author": "rektide",
+	"license": "MIT",
+	"module": "module-then.js",
+	"esm": true,
+	"type": "module"
+}
