@@ -17,6 +17,7 @@
 	"esm": true,
 	"type": "module",
 	"dependencies": {
-		"acorn": "^7.1.0"
+		"acorn": "^7.1.0",
+		"acorn-import-meta": "^1.0.0"
 	}
 }
