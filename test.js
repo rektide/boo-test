@@ -2,6 +2,7 @@
 import assert from "assert"
 import { fork } from "child_process"
 import { promises as fs } from "fs"
+import { parse } from "acorn"
 
 export async function test(){
 	const
@@ -14,5 +15,9 @@ export async function test(){
 	for await( let b of main.stdout){
 		buf.push( b)
 	}
+
+	// parse main
+	const mainAst= parse( mainSource)
+
 }
 test()

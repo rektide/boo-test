@@ -15,5 +15,8 @@
 	"license": "MIT",
 	"module": "boo-test.js",
 	"esm": true,
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"acorn": "^7.1.0"
+	}
 }
