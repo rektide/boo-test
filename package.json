@@ -1,19 +1,19 @@
 {
-	"name": "module-then",
+	"name": "boo-test",
 	"version": "1.0.0",
-	"description": "test of esm module's 'then' export",
+	"description": "boo testing framework ported to JS",
 	"main": "./test.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://archive.voodoowarez.com/module-then"
+		"url": "https://archive.voodoowarez.com/boo-test"
 	},
 	"keywords": [],
 	"author": "rektide",
 	"license": "MIT",
-	"module": "module-then.js",
+	"module": "boo-test.js",
 	"esm": true,
 	"type": "module"
 }
