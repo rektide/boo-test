@@ -6,6 +6,16 @@ import { fork } from "child_process"
 import { promises as fs } from "fs"
 import acorn from "acorn"
 
+function pickLiteralValue( node){
+	if( node.type!== "ExpressionStatement"){
+		return
+	}
+	if( node.expression.type!== "Literal"){
+		return
+	}
+	return node.expression.value
+}
+
 export async function test(js){
 	const
 		// run main, buf to collect stdout into
@@ -24,9 +34,13 @@ export async function test(js){
 			allowHashBang: true,
 			sourceType: "module"
 		}),
-		firstNode= mainAst.body[ 0],
-		hasUse= firstNode.type== "ExpressionStatement"&& firstNode.directive.startsWith("use "),
-		expected= mainAst.body[ hasUse? 1: 0]
+		firstNode= pickLiteralValue( mainAst.body[ 0])
+	if( !firstNode){
+		process.exit( 1)
+	}
+	const
+		hasUse= firstNode.startsWith( "use "),
+		expected= !hasUse? firstNode: pickLiteralValue( mainAst.body[ 1])
 	console.log(hasUse, expected )
 }
 test(process.argv[ 2])
