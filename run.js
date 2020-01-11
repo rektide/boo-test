@@ -6,7 +6,7 @@ import { fork } from "child_process"
 export async function run( jsFile){
 	const
 		// run main, buf to collect stdout into
-		main= fork( "jsFile", { silent: true}),
+		main= fork( jsFile, { silent: true}),
 		buf= []
 	// record main run's output
 	for await( let b of main.stdout){

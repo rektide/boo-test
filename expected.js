@@ -5,8 +5,6 @@ import { promises as fs } from "fs"
 import acorn from "acorn"
 import { default as importMeta } from "acorn-import-meta"
 
-console.log(importMeta)
-
 function pickLiteralValue( node){
 	if( node.type!== "ExpressionStatement"){
 		return
