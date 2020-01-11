@@ -1,6 +1,6 @@
 {
 	"name": "boo-test",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "boo testing framework ported to JS",
 	"main": "./test.js",
 	"scripts": {
